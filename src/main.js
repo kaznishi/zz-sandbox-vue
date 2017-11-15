@@ -1,7 +1,61 @@
 import Vue from 'vue'
-import App from './App.vue'
 
-new Vue({
+// simple Hello world
+var app = new Vue({
   el: '#app',
-  render: h => h(App)
+  data: {
+    message: 'Hello Vue!'
+  }
 })
+
+// v-bind sample
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    message: 'You loaded this-page on ' + new Date().toLocaleString()
+  }
+})
+
+// v-if sample
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    seen: false
+  }
+})
+
+// v-for sample
+var app4 = new Vue({
+  el: '#app-4',
+  data: {
+    todos: [
+      { text: 'Learn JavaScript' },
+      { text: 'Learn Vue' },
+      { text: 'Build something awesome' }
+    ]
+  }
+})
+
+// v-on sample
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Hello Vue.js!'
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    }
+  }
+})
+
+// v-model sample
+var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+
+
+

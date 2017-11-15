@@ -5,7 +5,38 @@
     <title>zz-sandbox-vue</title>
   </head>
   <body>
-    <div id="app"></div>
+    <!-- simple hello world -->
+    <div id="app">
+      {{ message }}
+    </div>
+    <!-- v-bind sample -->
+    <div id="app-2">
+      <span v-bind:title="message">
+        Hover your mouse over me for...
+      </span>
+    </div>
+    <!-- v-if sample -->
+    <div id="app-3">
+      <span v-if="seen">Now you see me</span>
+    </div>
+    <!-- v-for sample -->
+    <div id="app-4">
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+    </div>
+    <!-- v-on sample -->
+    <div id="app-5">
+      <p>{{ message }}</p>
+      <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+    <!-- v-model sample -->
+    <div id="app-6">
+      <p>{{ message }}</p>
+      <input v-model="message">
+    </div>
     <script src="/dist/build.js"></script>
   </body>
 </html>
